@@ -4,10 +4,10 @@ import '../App.css';
 
 function App() {
   return (
-    <div className="App">
-      {/* <Display /> */}
-      {/* <ButtonPanel /> */}
-    </div>
+    <React.Fragment>
+      <Display />
+      <ButtonPanel />
+    </React.Fragment>
   );
 }
 

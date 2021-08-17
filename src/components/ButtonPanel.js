@@ -59,19 +59,11 @@ function ButtonPanel() {
         text: '+',
       },
     ],
-    [
-      {
-        text: '0',
-      },
-      {
-        text: '.',
-      },
-      {
-        text: '=',
-      },
-    ],
+    [{ text: '0' }, { text: '.' }, { text: '=' }],
   ];
-  const buttonItems = buttons.map((array) => <div>{array.map((item) => <Button buttonName={item.text} key={item.text} />)}</div>);
+  const renderButtons = (array) => array.map((i) => <Button buttonName={i.text} key={i.text} />);
+
+  const buttonItems = buttons.map((array) => <div key={array[0].text}>{renderButtons(array)}</div>);
 
   return (
     <>

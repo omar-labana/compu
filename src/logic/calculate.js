@@ -9,7 +9,7 @@ const calculate = (actionData, buttonName) => {
 
   switch (buttonName) {
     case 'AC':
-      total = null;
+      total = '0';
       next = null;
       operationName = null;
       break;
@@ -17,24 +17,36 @@ const calculate = (actionData, buttonName) => {
       total *= -1;
       next *= -1;
       break;
-    case '.':
-      total = `${total}.`;
+    case '+': case '-': case 'X': case '÷': case '%':
+      operationName = buttonName;
+      next = '';
       break;
     case '=':
-      if (!total || !next || !operationName) return 0;
-      total = (total + operationName + next).toString();
-      break;
-    case '+': case '-': case '*': case '/': case '%':
       total = operate(total, next, operationName);
       break;
-    case '0': case '1': case '2': case '3': case '4': case '5': case '6': case '7': case '8': case '9':
-      if (!total) total = buttonName;
-      if (total && !next) next = buttonName;
+    case '0': case '1': case '2': case '3': case '4': case '5': case '6': case '7': case '8': case '9': case '.':
+      next = next ? next += buttonName : buttonName;
+      total = operationName ? total : next;
       break;
     default:
       total = 'Syntax Error';
   }
-  return actionData;
+
+  if (total) {
+    total = total.toString();
+  }
+  if (next) {
+    next = next.toString();
+  }
+  if (operationName) {
+    operationName = operationName.toString();
+  }
+
+  return {
+    total,
+    next,
+    operationName,
+  };
 };
 
 export default calculate;

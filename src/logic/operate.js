@@ -6,9 +6,9 @@ const operate = (numberOne, numberTwo, operation) => {
       return Big(numberOne).plus(numberTwo);
     case '-':
       return Big(numberOne).minus(numberTwo);
-    case '*':
+    case 'X':
       return Big(numberOne).times(numberTwo);
-    case '/':
+    case '÷':
       return Big(numberOne).div(numberTwo);
     case '%':
       return Big(numberOne).mod(numberTwo);

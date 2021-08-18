@@ -1,7 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import Button from './Button';
 
-function ButtonPanel() {
+const ButtonPanel = (props) => {
+  const { clickHandler } = props;
   const buttons = [
     [
       {
@@ -19,13 +22,13 @@ function ButtonPanel() {
     ],
     [
       {
-        text: '2',
-      },
-      {
         text: '7',
       },
       {
         text: '8',
+      },
+      {
+        text: '9',
       },
       {
         text: 'X',
@@ -61,7 +64,10 @@ function ButtonPanel() {
     ],
     [{ text: '0' }, { text: '.' }, { text: '=' }],
   ];
-  const renderButtons = (array) => array.map((i) => <Button buttonName={i.text} key={i.text} />);
+
+  const trick = (i) => <Button buttonName={i.text} key={i.text} clickHandler={clickHandler} />;
+
+  const renderButtons = (a) => a.map((i) => trick(i));
 
   const buttonItems = buttons.map((array) => <div key={array[0].text}>{renderButtons(array)}</div>);
 
@@ -70,6 +76,10 @@ function ButtonPanel() {
       {buttonItems}
     </>
   );
-}
+};
+
+ButtonPanel.propTypes = {
+  clickHandler: PropTypes.func.isRequired,
+};
 
 export default ButtonPanel;

@@ -4,7 +4,7 @@ const Display = (props) => {
   const { result } = props;
   return (
     <div>
-      <h1>{result}</h1>
+      <h1>{`result: ${result}`}</h1>
     </div>
   );
 };

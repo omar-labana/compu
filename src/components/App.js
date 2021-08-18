@@ -13,8 +13,6 @@ class App extends React.Component {
       next: null,
       operationName: null,
     };
-
-    // this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick = (buttonName) => {
@@ -31,14 +29,5 @@ class App extends React.Component {
     );
   }
 }
-
-// function App() {
-//   return (
-//     <>
-//       <Display />
-//       <ButtonPanel />
-//     </>
-//   );
-// }
 
 export default App;

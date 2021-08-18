@@ -22,13 +22,13 @@ const ButtonPanel = (props) => {
     ],
     [
       {
-        text: '2',
-      },
-      {
         text: '7',
       },
       {
         text: '8',
+      },
+      {
+        text: '9',
       },
       {
         text: 'X',

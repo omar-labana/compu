@@ -22,10 +22,12 @@ class App extends React.Component {
   render() {
     const { total, next, operationName } = this.state;
     return (
-      <>
-        <Display result={total} next={next} operationName={operationName} />
-        <ButtonPanel clickHandler={this.handleClick} />
-      </>
+      <main className="w-screen h-screen flex items-center justify-center">
+        <div className="calculator">
+          <Display result={total} next={next} operationName={operationName} />
+          <ButtonPanel clickHandler={this.handleClick} />
+        </div>
+      </main>
     );
   }
 }

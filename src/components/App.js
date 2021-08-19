@@ -1,35 +1,34 @@
 import React from 'react';
-import calculate from '../logic/calculate';
-import '../App.css';
-import Display from './Display';
-import ButtonPanel from './ButtonPanel';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Header from './Header';
+import Calculator from './Calculator';
+import Home from './Home';
+import Quote from './Quote';
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      total: null,
-      next: null,
-      operationName: null,
-    };
-  }
-
-  handleClick = (buttonName) => {
-    this.setState((state) => calculate(state, buttonName));
-  }
-
-  render() {
-    const { total, next, operationName } = this.state;
-    return (
-      <main className="w-screen h-screen flex items-center justify-center">
-        <div className="calculator">
-          <Display result={total} next={next} operationName={operationName} />
-          <ButtonPanel clickHandler={this.handleClick} />
-        </div>
-      </main>
-    );
-  }
+function App() {
+  return (
+    <BrowserRouter>
+      <Header />
+      <Switch>
+        <Route path="/calculator" component={Calculator} />
+        <Route path="/quote" component={Quote} />
+        <Route path="/" component={Home} />
+      </Switch>
+    </BrowserRouter>
+  );
 }
+
+// const App = () => (
+//   <>
+//     <BrowserRouter>
+//       <Header />
+//       <Switch>
+//         <Route path="/" component={Calculator} />
+//         <Route path="/calculator" component={Calculator} />
+//         <Route path="/quote" component={Quote} />
+//       </Switch>
+//     </BrowserRouter>
+//   </>
+// );
 
 export default App;

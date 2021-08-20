@@ -65,11 +65,26 @@ const ButtonPanel = (props) => {
     [{ text: '0' }, { text: '.' }, { text: '=' }],
   ];
 
-  const trick = (i) => <Button buttonName={i.text} key={i.text} clickHandler={clickHandler} />;
+  const divSty = 'h-24 flex';
+  const b = (i) => {
+    const wide = i === '0' ? 'w-1/2' : 'w-1/4';
+    let color = '';
+    switch (i) {
+      case '+': case '-': case 'X': case '÷': case '=':
+        color = 'bg-yellow-600';
+        break;
 
-  const renderButtons = (a) => a.map((i) => trick(i));
+      default:
+        color = 'bg-gray-200';
+        break;
+    }
+    return `${color} ${wide} border border-gray-300 text-2xl font-semibold`;
+  };
+  const t = (i) => <Button buttonName={i.text} key={i.text} st={b} clickHandler={clickHandler} />;
 
-  const buttonItems = buttons.map((array) => <div key={array[0].text}>{renderButtons(array)}</div>);
+  const renBut = (a) => a.map((i) => t(i));
+
+  const buttonItems = buttons.map((a) => <div key={a[0].text} className={divSty}>{renBut(a)}</div>);
 
   return (
     <>

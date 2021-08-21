@@ -12,6 +12,11 @@ Simple calculator built with React
 - Tailwind CSS
 - big.js
 
+## Run tests 🔨
+```sh
+   npm run test
+```
+
 
 
 ## Getting Started 💻

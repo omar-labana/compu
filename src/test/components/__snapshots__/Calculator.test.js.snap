@@ -1,0 +1,198 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Calculator Component has to match snap 1`] = `
+<main
+  className="flex items-center justify-around"
+>
+  <h2
+    className="text-2xl"
+  >
+    Let’s do some math!
+  </h2>
+  <div
+    className="calculator"
+  >
+    <div
+      className="bg-gray-400 h-24"
+    >
+      <h1
+        className="text-white font-bold p-5 text-right text-3xl"
+      >
+        null
+      </h1>
+    </div>
+    <div
+      className="h-24 flex"
+    >
+      <button
+        className="bg-gray-200 w-1/4 border border-gray-300 text-2xl font-semibold"
+        name="button"
+        onClick={[Function]}
+        type="button"
+      >
+        AC
+      </button>
+      <button
+        className="bg-gray-200 w-1/4 border border-gray-300 text-2xl font-semibold"
+        name="button"
+        onClick={[Function]}
+        type="button"
+      >
+        +/-
+      </button>
+      <button
+        className="bg-gray-200 w-1/4 border border-gray-300 text-2xl font-semibold"
+        name="button"
+        onClick={[Function]}
+        type="button"
+      >
+        %
+      </button>
+      <button
+        className="bg-yellow-600 w-1/4 border border-gray-300 text-2xl font-semibold"
+        name="button"
+        onClick={[Function]}
+        type="button"
+      >
+        ÷
+      </button>
+    </div>
+    <div
+      className="h-24 flex"
+    >
+      <button
+        className="bg-gray-200 w-1/4 border border-gray-300 text-2xl font-semibold"
+        name="button"
+        onClick={[Function]}
+        type="button"
+      >
+        7
+      </button>
+      <button
+        className="bg-gray-200 w-1/4 border border-gray-300 text-2xl font-semibold"
+        name="button"
+        onClick={[Function]}
+        type="button"
+      >
+        8
+      </button>
+      <button
+        className="bg-gray-200 w-1/4 border border-gray-300 text-2xl font-semibold"
+        name="button"
+        onClick={[Function]}
+        type="button"
+      >
+        9
+      </button>
+      <button
+        className="bg-yellow-600 w-1/4 border border-gray-300 text-2xl font-semibold"
+        name="button"
+        onClick={[Function]}
+        type="button"
+      >
+        X
+      </button>
+    </div>
+    <div
+      className="h-24 flex"
+    >
+      <button
+        className="bg-gray-200 w-1/4 border border-gray-300 text-2xl font-semibold"
+        name="button"
+        onClick={[Function]}
+        type="button"
+      >
+        4
+      </button>
+      <button
+        className="bg-gray-200 w-1/4 border border-gray-300 text-2xl font-semibold"
+        name="button"
+        onClick={[Function]}
+        type="button"
+      >
+        5
+      </button>
+      <button
+        className="bg-gray-200 w-1/4 border border-gray-300 text-2xl font-semibold"
+        name="button"
+        onClick={[Function]}
+        type="button"
+      >
+        6
+      </button>
+      <button
+        className="bg-yellow-600 w-1/4 border border-gray-300 text-2xl font-semibold"
+        name="button"
+        onClick={[Function]}
+        type="button"
+      >
+        -
+      </button>
+    </div>
+    <div
+      className="h-24 flex"
+    >
+      <button
+        className="bg-gray-200 w-1/4 border border-gray-300 text-2xl font-semibold"
+        name="button"
+        onClick={[Function]}
+        type="button"
+      >
+        1
+      </button>
+      <button
+        className="bg-gray-200 w-1/4 border border-gray-300 text-2xl font-semibold"
+        name="button"
+        onClick={[Function]}
+        type="button"
+      >
+        2
+      </button>
+      <button
+        className="bg-gray-200 w-1/4 border border-gray-300 text-2xl font-semibold"
+        name="button"
+        onClick={[Function]}
+        type="button"
+      >
+        3
+      </button>
+      <button
+        className="bg-yellow-600 w-1/4 border border-gray-300 text-2xl font-semibold"
+        name="button"
+        onClick={[Function]}
+        type="button"
+      >
+        +
+      </button>
+    </div>
+    <div
+      className="h-24 flex"
+    >
+      <button
+        className="bg-gray-200 w-1/2 border border-gray-300 text-2xl font-semibold"
+        name="button"
+        onClick={[Function]}
+        type="button"
+      >
+        0
+      </button>
+      <button
+        className="bg-gray-200 w-1/4 border border-gray-300 text-2xl font-semibold"
+        name="button"
+        onClick={[Function]}
+        type="button"
+      >
+        .
+      </button>
+      <button
+        className="bg-yellow-600 w-1/4 border border-gray-300 text-2xl font-semibold"
+        name="button"
+        onClick={[Function]}
+        type="button"
+      >
+        =
+      </button>
+    </div>
+  </div>
+</main>
+`;
